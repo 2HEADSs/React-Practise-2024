@@ -14,5 +14,13 @@
         "imageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/8500/header.jpg?t=1726777952",
         "summary": "EVE Online is a free-to-play community driven space MMO where players can choose their own path from countless different options. Experience space exploration, immense PvP and PvE battles, mining, industry and a thriving player economy in an ever-expanding sandbox.",
         "_id": "0f8c2891-9f83-4e17-a28f-1bebd1804b7d"
+    },
+    "ff030fcb-cb90-4694-b1ae-d7d3a5e37364": {
+        "title": "WOW",
+        "category": "MMORPG",
+        "maxLevel": "12",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png",
+        "summary": "Get back in the fight as you defend Azeroth from the shadows below. Journey through never-before-seen subterranean worlds filled with hidden wonders and lurking perils, down to the dark depths of the nerubian empire, where the malicious Harbinger of the Void is gathering arachnid forces to bring Azeroth to its knees. ",
+        "_id": "ff030fcb-cb90-4694-b1ae-d7d3a5e37364"
     }
 }
