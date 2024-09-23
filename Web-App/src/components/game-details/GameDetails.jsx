@@ -28,7 +28,7 @@ export default function GameDetails() {
                 </div>
 
                 <p className="text">
-                    {game.description}
+                    {game.summary}
                 </p>
 
                 {/* <!-- Bonus ( for Guests and Users ) --> */}

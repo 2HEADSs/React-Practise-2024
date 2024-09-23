@@ -10,7 +10,7 @@ export default function GameList() {
     useEffect(() => {
         (async () => {
             const result = await gamesAPI.getAll();
-            console.log(result);
+            // console.log(result);
 
             setGames(result);
         })();
