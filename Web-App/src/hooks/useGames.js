@@ -34,6 +34,7 @@ export function useGetOneGames(gameId) {
 }
 
 export function useCreateGame() {
+    
     const gameCreateHandler = async (gameData) => gamesAPI.create(gameData);
     return gameCreateHandler
 }
