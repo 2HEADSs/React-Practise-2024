@@ -11,6 +11,7 @@ export default function Home() {
             const result = await gamesApi.getAll();
 
             setLatestGmaes(result.reverse().slice(0, 3))
+
         })()
     }, [])
     return (
