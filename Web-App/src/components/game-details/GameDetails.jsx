@@ -19,9 +19,14 @@ export default function GameDetails() {
         changeHandler,
         submitHandler,
         values
-    } = useForm(initialValues, ({ comment }) => {
-        
-        createComment(gameId, comment)
+    } = useForm(initialValues, async ({ comment }) => {
+        try {
+            const newComment = await createComment(gameId, comment);
+            sectComments(oldComments => [...oldComments, newComment])
+        } catch (err) {
+            console.log(err.message);
+
+        }
     })
 
 
@@ -45,7 +50,7 @@ export default function GameDetails() {
                     <h2>Comments:</h2>
                     <ul>
                         {comments.map(comment => (
-                            <li className="comment">
+                            <li key={comment._id} className="comment">
                                 <p>username: {comment.text}</p>
                             </li>
                         ))}
