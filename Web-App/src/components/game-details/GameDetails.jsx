@@ -12,8 +12,8 @@ export default function GameDetails() {
     const { gameId } = useParams();
     const [comments, sectComments] = useGetAllCommentes(gameId)
     const createComment = useCreateComment();
-    const { isAuthenticated } = useAuthContext();
     const [game] = useGetOneGames(gameId);
+    const { isAuthenticated } = useAuthContext();
 
     const {
         changeHandler,
@@ -29,8 +29,8 @@ export default function GameDetails() {
         }
     })
 
-
     return (
+
         <section id="game-details">
             <h1>Game Details</h1>
             <div className="info-section">
@@ -51,12 +51,13 @@ export default function GameDetails() {
                     <ul>
                         {comments.map(comment => (
                             <li key={comment._id} className="comment">
-                                <p>{comment.author.username}: {comment.text}</p>
+                                <p>{comment.author.email}: {comment.text}</p>
                             </li>
                         ))}
                     </ul>
                     {comments.length === 0 &&
                         <p className="no-comment">No comments.</p>
+
                     }
                 </div>
 

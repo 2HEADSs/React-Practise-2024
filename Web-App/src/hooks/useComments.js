@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import commentsApi from "../api/comments-api";
-
+import {commentsAPI} from "../api/comments-api"
 export function useCreateComment() {
-    const createHandler = (gameIdId, comment) => commentsApi.create(gameIdId, comment)
+    const createHandler = (gameIdId, comment) => commentsAPI
     return createHandler;
 }
 
@@ -10,8 +9,6 @@ export function useGetAllCommentes(gameId) {
     const [comments, setComments] = useState([]);
     useEffect(() => {
         (async () => {
-            const result = await commentsApi.getAll(gameId);
-            setComments(result);
         })();
     }, [gameId])
     return [comments, setComments];
