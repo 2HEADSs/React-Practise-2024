@@ -2,10 +2,10 @@ import requester from "./requester";
 const BASE_URL = 'http://localhost:3030/data/comments';
 
 // Function to create a comment
-const create = (gameId, text) => requester.post(BASE_URL, { gameId, text });
+export const createComment = (gameId, text) => requester.post(BASE_URL, { gameId, text });
 
 // Function to get all comments for a specific game
-const getAll = (gameId) => {
+export const getAllComments = (gameId) => {
     const params = new URLSearchParams({
         where: `gameId ="${gameId}"`,
         load: `author=_ownerId:users`
@@ -15,9 +15,3 @@ const getAll = (gameId) => {
 };
 
 
-const commentsAPI = {
-    create,
-    getAll
-};
-
-export default commentsAPI;

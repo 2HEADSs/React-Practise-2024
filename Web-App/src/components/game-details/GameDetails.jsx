@@ -14,6 +14,7 @@ export default function GameDetails() {
     const createComment = useCreateComment();
     const [game] = useGetOneGames(gameId);
     const { isAuthenticated } = useAuthContext();
+    comments.map(x => console.log((x.author.email)))
 
     const {
         changeHandler,
@@ -25,7 +26,6 @@ export default function GameDetails() {
             sectComments(oldComments => [...oldComments, newComment])
         } catch (err) {
             console.log(err.message);
-
         }
     })
 
@@ -51,7 +51,8 @@ export default function GameDetails() {
                     <ul>
                         {comments.map(comment => (
                             <li key={comment._id} className="comment">
-                                <p>{comment.author.email}: {comment.text}</p>
+                                {/* <p>{comment.author.email}: {comment.text}</p> */}
+                                <p>Comment from user: {comment.text}</p>
                             </li>
                         ))}
                     </ul>
