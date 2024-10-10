@@ -9,6 +9,7 @@ import Register from './components/register/Register';
 import GameList from './components/game-list/GameList';
 import GameCreate from './components/game-create/GameCreate';
 import GameDetails from './components/game-details/GameDetails';
+import GameEdit from './components/geme-edit/GameEdit';
 import Logout from './components/logout/Logout';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                         <Route path='/register' element={<Register />} />
                         <Route path='/games' element={<GameList />} />
                         <Route path='/games/:gameId/details' element={<GameDetails />} />
+                        <Route path='/games/:gameId/edit' element={<GameEdit />} />
                         <Route path='/games/create' element={<GameCreate />} />
                     </Routes>
                 </main>

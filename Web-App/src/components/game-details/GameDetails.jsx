@@ -1,4 +1,4 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { useGetOneGames } from "../../hooks/useGames";
 import { useForm } from "../../hooks/useForm";
 import { useCreateComment, useGetAllCommentes } from "../../hooks/useComments";
@@ -79,9 +79,9 @@ export default function GameDetails() {
                 {/* <!-- Edit/Delete buttons ( Only for creator of this game )  --> */}
                 {isOwner &&
                     <div className="buttons">
-                        <a href="#" className="button">
+                        <Link to={`/games/${gameId}/edit`} className="button">
                             Edit
-                        </a>
+                        </Link>
                         <a href="#" onClick={gameDeleteHandler} className="button">
                             Delete
                         </a>
