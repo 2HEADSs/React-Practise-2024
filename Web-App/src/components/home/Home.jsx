@@ -8,9 +8,8 @@ export default function Home() {
     useEffect(() => {
         (async () => {
             //TODO: modify to fetch inly latest games
-            const result = await gamesApi.getAll();
-
-            setLatestGmaes(result.reverse().slice(0, 3))
+            const result = await gamesApi.getLatest();
+            setLatestGmaes(result)
         })()
     }, [])
     return (

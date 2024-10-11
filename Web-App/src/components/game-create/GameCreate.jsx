@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { useCreateGame } from "../../hooks/useGames";
 
+
+//if i do not use options:reinitializedFomr in useForm i should use "initialValues" it outside the function
 const initialValues = {
     title: '',
     category: '',
@@ -10,9 +12,8 @@ const initialValues = {
     summary: '',
 }
 export default function GameCreate() {
-    const navigate = useNavigate()
-    const createGame = useCreateGame()
-
+    const navigate = useNavigate();
+    const createGame = useCreateGame();
     const createHandler = async (values) => {
         try {
             const { _id: gameId } = await createGame(values);
