@@ -23,9 +23,9 @@ export default function GameEdit() {
         submitHandler,
         values,
     } = useForm(Object.assign(initialValues, game), async (values) => {
-        const updatedGame = await gamesAPI.update(gameId, values);
-        // navigate(`/games/${gameId}/details`);
-        setGame(updatedGame)
+            const updatedGame = await gamesAPI.update(gameId, values);
+            // navigate(`/games/${gameId}/details`);
+            setGame(updatedGame)
 
     });
 
